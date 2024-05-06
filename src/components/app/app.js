@@ -14,8 +14,8 @@ class App extends Component {
     this.state = {
       data: [
         { name: 'John C.', salary: 800, increase: false, id: 1 },
-        { name: 'Alex M.', salary: 1000, increase: true, id: 2 },
-        { name: 'Carl S.', salary: 1200, increase: false, id: 3 },
+        { name: 'Alex M.', salary: 3000, increase: true, id: 2 },
+        { name: 'Carl W.', salary: 5000, increase: false, id: 3 }
       ]
     }
     this.maxId = 4;
@@ -29,6 +29,7 @@ class App extends Component {
     })
   }
 
+  // Да, пока могут добавляться пустые пользователи. Мы это еще исправим
   addItem = (name, salary) => {
     const newItem = {
       name,

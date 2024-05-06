@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import { Component } from 'react';
 
 import './employees-add-form.css';
@@ -14,7 +13,7 @@ class EmployeesAddForm extends Component {
 
     onValueChange = (e) => {
         this.setState({
-            [e.target.value]: e.target.value
+            [e.target.name]: e.target.value
         })
     }
 
@@ -28,7 +27,7 @@ class EmployeesAddForm extends Component {
     }
 
     render() {
-        const { name, salary } = this.state
+        const { name, salary } = this.state;
 
         return (
             <div className="app-add-form">
@@ -39,13 +38,13 @@ class EmployeesAddForm extends Component {
                     <input type="text"
                         className="form-control new-post-label"
                         placeholder="Как его зовут?"
-                        name='name'
+                        name="name"
                         value={name}
                         onChange={this.onValueChange} />
                     <input type="number"
                         className="form-control new-post-label"
                         placeholder="З/П в $?"
-                        name='salary'
+                        name="salary"
                         value={salary}
                         onChange={this.onValueChange} />
 
